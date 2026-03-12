@@ -6,5 +6,17 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    allowedHosts: "all",
+    proxy: {
+      "/socket.io": {
+        target: "http://localhost:3001",
+        ws: true,
+        changeOrigin: true,
+      },
+      "/health": {
+        target: "http://localhost:3001",
+        changeOrigin: true,
+      },
+    },
   },
 });
