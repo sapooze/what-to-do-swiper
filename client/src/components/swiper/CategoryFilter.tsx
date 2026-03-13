@@ -24,7 +24,7 @@ export function CategoryFilter({ value, onChange }: Props) {
           className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs font-semibold transition-all whitespace-nowrap ${
             value === f.value
               ? "bg-indigo-600 text-white shadow-md"
-              : "bg-white text-gray-500 border border-gray-200 hover:border-indigo-300"
+              : "bg-white dark:bg-gray-700 text-gray-500 dark:text-gray-400 border border-gray-200 dark:border-gray-600 hover:border-indigo-300 dark:hover:border-indigo-500"
           }`}
         >
           {f.icon} {f.label}

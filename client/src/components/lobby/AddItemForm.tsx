@@ -30,7 +30,7 @@ export function AddItemForm({ roomCode }: Props) {
             className={`flex-1 py-2 px-2 rounded-xl text-xs font-semibold transition-all ${
               category === cat
                 ? "bg-indigo-600 text-white shadow-md"
-                : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                : "bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-600"
             }`}
           >
             {CATEGORY_ICONS[cat]} {CATEGORY_LABELS[cat]}
@@ -44,7 +44,7 @@ export function AddItemForm({ roomCode }: Props) {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder={`Add a ${CATEGORY_LABELS[category].toLowerCase()}...`}
-          className="flex-1 px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-300 text-sm"
+          className="flex-1 px-4 py-3 rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-300 text-sm"
           maxLength={80}
         />
         <button

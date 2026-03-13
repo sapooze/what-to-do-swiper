@@ -11,10 +11,10 @@ export function RoomPage() {
   // Room not in store — user may have navigated directly
   if (!room || !userId) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-indigo-50">
+      <div className="min-h-screen flex items-center justify-center bg-indigo-50 dark:bg-gray-900">
         <div className="text-center">
           <div className="text-5xl mb-4">🔌</div>
-          <p className="text-gray-600 font-medium mb-4">Session not found</p>
+          <p className="text-gray-600 dark:text-gray-300 font-medium mb-4">Session not found</p>
           <button
             onClick={() => navigate("/")}
             className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors"
