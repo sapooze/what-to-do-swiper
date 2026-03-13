@@ -13,7 +13,7 @@ A real-time couples/friends activity decider. Both people add things they'd like
 
 ## Live Demo
 
-> **Link soon**
+> https://demo.vilkh.de/
 
 ## Tech Stack
 
