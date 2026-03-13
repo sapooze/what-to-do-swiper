@@ -11,6 +11,10 @@ A real-time couples/friends activity decider. Both people add things they'd like
 - **Export list** — save your current item list as a short code you can copy and share
 - **Import list** — paste a previously exported code to instantly restore all items into a new room
 
+## Live Demo
+
+> **Link soon**
+
 ## Tech Stack
 
 - **Frontend:** React, TypeScript, Vite, Tailwind CSS, Zustand
