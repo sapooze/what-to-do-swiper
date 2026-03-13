@@ -27,24 +27,24 @@ export function SwipeCard({ item, onVote, isTop, stackIndex }: Props) {
       style={isTop ? { ...dragStyle, ...stackStyle } : stackStyle}
       {...(isTop ? pointerHandlers : {})}
     >
-      <div className="w-full h-full bg-white rounded-3xl shadow-xl border border-gray-100 flex flex-col p-6 select-none overflow-hidden">
+      <div className="w-full h-full bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 flex flex-col p-6 select-none overflow-hidden">
         {/* Category badge */}
         <div className="flex items-center gap-2 mb-auto">
           <span className="text-2xl">{CATEGORY_ICONS[item.category]}</span>
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">
+          <span className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">
             {CATEGORY_LABELS[item.category]}
           </span>
         </div>
 
         {/* Item text */}
         <div className="flex-1 flex items-center justify-center py-4">
-          <p className="text-3xl font-bold text-gray-800 text-center leading-tight">
+          <p className="text-3xl font-bold text-gray-800 dark:text-gray-100 text-center leading-tight">
             {item.text}
           </p>
         </div>
 
         {/* Added by */}
-        <p className="text-xs text-gray-300 text-center mt-auto">
+        <p className="text-xs text-gray-300 dark:text-gray-600 text-center mt-auto">
           added by {item.addedByName}
         </p>
 

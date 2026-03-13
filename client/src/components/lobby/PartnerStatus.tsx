@@ -10,7 +10,7 @@ export function PartnerStatus({ users, currentUserId }: Props) {
 
   if (!partner) {
     return (
-      <div className="flex items-center gap-2 text-sm text-gray-400">
+      <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-gray-500">
         <span className="inline-block w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
         Waiting for your partner to join...
       </div>

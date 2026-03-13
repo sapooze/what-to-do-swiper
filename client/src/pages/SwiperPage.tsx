@@ -6,6 +6,7 @@ import { CardStack } from "../components/swiper/CardStack";
 import { SwipeButtons } from "../components/swiper/SwipeButtons";
 import { CategoryFilter } from "../components/swiper/CategoryFilter";
 import { MatchToast } from "../components/match/MatchToast";
+import { DarkModeToggle } from "../components/DarkModeToggle";
 import { Room, Category } from "../types";
 
 type FilterValue = Category | "all";
@@ -40,32 +41,35 @@ export function SwiperPage({ room, userId: _userId }: Props) {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex flex-col">
       {/* Header */}
       <div className="px-4 pt-6 pb-2">
         <div className="max-w-sm mx-auto flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-black text-gray-800">Swipe!</h1>
-            <p className="text-xs text-gray-400">Swipe right to like, left to skip</p>
+            <h1 className="text-xl font-black text-gray-800 dark:text-gray-100">Swipe!</h1>
+            <p className="text-xs text-gray-400 dark:text-gray-500">Swipe right to like, left to skip</p>
           </div>
-          <button
-            onClick={() => navigate(`/matches/${room.code}`)}
-            className="relative px-3 py-2 bg-white rounded-xl shadow-sm border border-gray-100 text-sm font-semibold text-indigo-600"
-          >
-            Matches
-            {room.matches.length > 0 && (
-              <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-indigo-600 text-white text-xs rounded-full flex items-center justify-center font-bold">
-                {room.matches.length}
-              </span>
-            )}
-          </button>
+          <div className="flex items-center gap-2">
+            <DarkModeToggle />
+            <button
+              onClick={() => navigate(`/matches/${room.code}`)}
+              className="relative px-3 py-2 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 text-sm font-semibold text-indigo-600 dark:text-indigo-400"
+            >
+              Matches
+              {room.matches.length > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-indigo-600 text-white text-xs rounded-full flex items-center justify-center font-bold">
+                  {room.matches.length}
+                </span>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Partner disconnected banner */}
       {partnerDisconnected && (
         <div className="mx-4 mb-2">
-          <div className="max-w-sm mx-auto bg-amber-50 border border-amber-200 rounded-xl px-4 py-2 text-sm text-amber-700">
+          <div className="max-w-sm mx-auto bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 rounded-xl px-4 py-2 text-sm text-amber-700 dark:text-amber-400">
             ⚠️ Partner disconnected — you can still keep swiping
           </div>
         </div>

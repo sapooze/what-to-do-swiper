@@ -10,7 +10,7 @@ export function SwipeButtons({ onDislike, onLike, disabled }: Props) {
       <button
         onClick={onDislike}
         disabled={disabled}
-        className="w-16 h-16 rounded-full bg-white shadow-lg border-2 border-red-200 text-2xl flex items-center justify-center hover:bg-red-50 hover:border-red-400 active:scale-95 transition-all disabled:opacity-30"
+        className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 shadow-lg border-2 border-red-200 dark:border-red-800 text-2xl flex items-center justify-center hover:bg-red-50 dark:hover:bg-red-900/30 hover:border-red-400 active:scale-95 transition-all disabled:opacity-30"
         title="Nope"
       >
         ✕
@@ -18,7 +18,7 @@ export function SwipeButtons({ onDislike, onLike, disabled }: Props) {
       <button
         onClick={onLike}
         disabled={disabled}
-        className="w-16 h-16 rounded-full bg-white shadow-lg border-2 border-emerald-200 text-2xl flex items-center justify-center hover:bg-emerald-50 hover:border-emerald-400 active:scale-95 transition-all disabled:opacity-30"
+        className="w-16 h-16 rounded-full bg-white dark:bg-gray-800 shadow-lg border-2 border-emerald-200 dark:border-emerald-800 text-2xl flex items-center justify-center hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:border-emerald-400 active:scale-95 transition-all disabled:opacity-30"
         title="Yes!"
       >
         ❤️
